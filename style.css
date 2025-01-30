@@ -62,6 +62,12 @@ body::before {
     font-weight: 700;
     border: none;
     margin-top: 2rem;
+    cursor: pointer;
+}
+
+.container__botao:hover {
+    transition: background 0.4s;
+    background: #1354A5;
 }
 
 .container__texto {
