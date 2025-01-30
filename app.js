@@ -10,7 +10,16 @@ exibirTexto('p', 'Escolha um número entre 1 e 10');
 
 function verificarChute() {
     let chute = document.querySelector('input').value;
-    console.log(chute == numeroSecreto);
+    
+    if (chute == numeroSecreto) {
+        exibirTexto('h1', 'Acertou');
+    }
+
+    if (chute > numeroSecreto) {
+        exibirTexto('p', 'O número secreto é menor');
+    } else {
+        exibirTexto('p', 'O número secreto é maior');
+    }
 }
 
 function gerarNumeroAleatorio() {
