@@ -33,7 +33,7 @@ function verificarChute() {
         let palavraTentativa = tentativas > 1 ? 'tentativas' : 'tentativa';
         let mensagemTentativas = `Você descobriu o número secreto com ${tentativas} ${palavraTentativa}!`;
         exibirTexto('p', mensagemTentativas);
-        exibirImagem('img', 'https://i.gifer.com/origin/35/3516b5ffb1c132e6ade61f768b3c2dda_w200.gif');
+        exibirImagem('img', 'https://i.pinimg.com/originals/bd/22/c5/bd22c5644c600532c3370b63134a2d35.gif');
         document.getElementById('reiniciar').removeAttribute('disabled');
     } else {
         exibirImagem('img', 'https://image.myanimelist.net/ui/u60Crn7tADGIKarVpy6ivEMh10_XVs0D1MgNb_41YGYlEDWQvQQaB_dvgKbakTyWBr3j7n8CDvR5jBQneGcbJg');

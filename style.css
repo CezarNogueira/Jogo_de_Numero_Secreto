@@ -95,6 +95,7 @@ body::before {
 }
 
 .container__imagem {
+    min-height: 25rem;
     height: 25rem;
 }
 
