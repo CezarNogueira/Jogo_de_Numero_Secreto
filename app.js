@@ -9,9 +9,18 @@ function exibirTexto(tag, texto) {
     responsiveVoice.speak(texto, 'Brazilian Portuguese Female', {rate:1.2});
 }
 
+function exibirImagem(tag, src) {
+    /*padrao = 'https://i.pinimg.com/originals/4a/29/97/4a2997ff3bc339c9f1527b1a19ec9f40.gif';
+    acerto = 'https://i.gifer.com/origin/35/3516b5ffb1c132e6ade61f768b3c2dda_w200.gif';
+    erro = 'https://image.myanimelist.net/ui/u60Crn7tADGIKarVpy6ivEMh10_XVs0D1MgNb_41YGYlEDWQvQQaB_dvgKbakTyWBr3j7n8CDvR5jBQneGcbJg';*/
+    let elemento = document.querySelector(tag);
+    elemento.src = src;
+}
+
 function exibirInicio() {
     exibirTexto('h1', 'Jogo do número secreto');
     exibirTexto('p', 'Escolha um número entre 1 e 10');
+    exibirImagem('img', 'https://i.pinimg.com/originals/4a/29/97/4a2997ff3bc339c9f1527b1a19ec9f40.gif')
 }
 
 exibirInicio();
@@ -24,8 +33,10 @@ function verificarChute() {
         let palavraTentativa = tentativas > 1 ? 'tentativas' : 'tentativa';
         let mensagemTentativas = `Você descobriu o número secreto com ${tentativas} ${palavraTentativa}!`;
         exibirTexto('p', mensagemTentativas);
+        exibirImagem('img', 'https://i.gifer.com/origin/35/3516b5ffb1c132e6ade61f768b3c2dda_w200.gif');
         document.getElementById('reiniciar').removeAttribute('disabled');
     } else {
+        exibirImagem('img', 'https://image.myanimelist.net/ui/u60Crn7tADGIKarVpy6ivEMh10_XVs0D1MgNb_41YGYlEDWQvQQaB_dvgKbakTyWBr3j7n8CDvR5jBQneGcbJg');
         if (chute > numeroSecreto) {
             exibirTexto('p', 'O número secreto é menor');
         } else {
